@@ -1,48 +1,169 @@
-    <header class="p-3 bg-dark text-white">
-      <div class="container">
-        <div
-          class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
-        >
-          <a
-            href="/"
-            class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"
-          >
-            <svg
-              class="bi me-2"
-              width="40"
-              height="32"
-              role="img"
-              aria-label="Bootstrap"
-            >
-              <use xlink:href="#bootstrap" />
-            </svg>
-          </a>
-
-          <ul
-            class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
-          >
-            <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
-            <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
-            <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
-            <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-            <li><a href="#" class="nav-link px-2 text-white">About</a></li>
-          </ul>
-
-          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-            <input
-              type="search"
-              class="form-control form-control-dark"
-              placeholder="Search..."
-              aria-label="Search"
+    <header>
+      <nav class="navbar border-bottom border-body navbar-expand-md">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/website/index.html">
+            <img
+              src="/images/logo-black-nobk.png"
+              alt="Frostbite Futures Company Logo"
+              width="375rem"
+              height="100rem"
             />
-          </form>
-
-          <div class="text-end">
-            <button type="button" class="btn btn-outline-light me-2">
-              Login
-            </button>
-            <button type="button" class="btn btn-warning">Sign-up</button>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link search-bar"
+                  aria-current="page"
+                  href="/website/about.html"
+                  text-nowrap
+                >
+                  <strong>About Us</strong>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link search-bar" href="#" text-nowrap
+                  ><strong>Valuation Tools & Indicators</strong></a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle search-bar"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <strong>Energy</strong>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#"> Crude Oil </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"> Brent </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"> Natural Gas </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"> Coal </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"> Uranium </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle search-bar"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  text-nowrap
+                >
+                  <strong>Industrial Metals</strong>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#"> Copper </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"> Steel </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"> Iron Ore </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"> Lithium </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"> Cobalt </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle search-bar"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <strong>Agriculture</strong>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#"> Corn </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"> Sugar </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"> Wheat </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"> Coffee </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"> Milk </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle search-bar"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <strong>Precious Metals & Bullion</strong>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#"> Gold Mining Stocks </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"> Silver Mining Stocks </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Platinum Mining Stocks
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"> Bullion Store </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"> Premium Calculator </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link search-bar" href="#"
+                  ><strong>Market News</strong></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link search-bar" href="#"
+                  ><strong>Contact Us</strong></a
+                >
+              </li>
+            </ul>
           </div>
         </div>
-      </div>
+      </nav>
     </header>
