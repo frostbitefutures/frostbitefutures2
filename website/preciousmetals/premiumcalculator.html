@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Frostbite Futures provides tools, news, and insights for the global commodities market, including a bullion premium calculator."
+    />
+    <meta
+      name="keywords"
+      content="commodities, oil and gas, industrial metals, agriculture, energy, precious metals"
+    />
+    <title>Frostbite Futures</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+    <style>
+      /* WebKit Browsers */
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Firefox */
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--Navbar-->
+    <header>
+      <nav class="navbar bg-dark text-white navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+          <!--Navbar Logo-->
+          <a class="navbar-brand" href="/website/index.html">
+            <img
+              src="/images/White logo - no background.png"
+              alt="Frostbite Futures Logo"
+              width="250px"
+              height="100px"
+            />
+          </a>
+          <div
+            class="offcanvas offcanvas-end collapse navbar-collapse"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                Frostbite Futures
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body" id="navbarNavDropdown">
+              <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a
+                    class="nav-link mx-lg-2 active"
+                    aria-current="page"
+                    href="/website/index.html"
+                    style="color: white"
+                    >Home</a
+                  >
+                </li>
+                <!--Valuation Tools Nav Item-->
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle search-bar mx-lg-2"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    data-bs-toggle="dropdown"
+                    >Valuation Tools</a
+                  >
+                  <ul class="dropdown-menu">
+                    <li class="list-item">
+                      <a class="dropdown-item" href="#"> List 1</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"> List 2 </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"> List 3 </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"> List 4 </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"> List 5 </a>
+                    </li>
+                  </ul>
+                </li>
+                <!--Indicators Nav Item-->
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle search-bar mx-lg-2"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    data-bs-toggle="dropdown"
+                    >Indicators</a
+                  >
+                  <ul class="dropdown-menu">
+                    <li class="list-item">
+                      <a class="dropdown-item" href="#"> List 1 </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"> List 2 </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"> List 3 </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"> List 4 </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"> List 5 </a>
+                    </li>
+                  </ul>
+                </li>
+                <!--Energy Nav Item-->
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle search-bar mx-lg-2"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    data-bs-toggle="dropdown"
+                    >Energy</a
+                  >
+                  <ul class="dropdown-menu">
+                    <li class="list-item">
+                      <a
+                        class="dropdown-item"
+                        href="/website/energy/crude.html"
+                      >
+                        Crude Oil
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/website/energy/brent.html"
+                      >
+                        Brent
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/website/energy/natgas.html
+                      "
+                      >
+                        Natural Gas
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="/website/energy/coal.html">
+                        Coal
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/website/energy/uranium.html"
+                      >
+                        Uranium
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <!--Industrial Metals Nav Item-->
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle search-bar mx-lg-2"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    data-bs-toggle="dropdown"
+                    >Industrial Metals</a
+                  >
+                  <ul class="dropdown-menu">
+                    <li class="list-item">
+                      <a
+                        class="dropdown-item"
+                        href="/website/industrial/copper.html"
+                      >
+                        Copper
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/website/industrial/steel.html"
+                      >
+                        Steel
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/website/industrial/iron.html"
+                      >
+                        Iron Ore
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/website/industrial/lithium.html"
+                      >
+                        Lithium
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/website/industrial/cobalt.html"
+                      >
+                        Cobalt
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <!--Agriculture Nav Item-->
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle search-bar mx-lg-2"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    data-bs-toggle="dropdown"
+                    >Agriculture</a
+                  >
+                  <ul class="dropdown-menu">
+                    <li class="list-item">
+                      <a
+                        class="dropdown-item"
+                        href="/website/agriculture/corn.html"
+                      >
+                        Corn
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/website/agriculture/sugar.html"
+                      >
+                        Sugar
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/website/agriculture/wheat.html"
+                      >
+                        Wheat
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/website/agriculture/coffee.html"
+                      >
+                        Coffee
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/website/agriculture/milk.html"
+                      >
+                        Milk
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <!--Precious Metals Nav Item-->
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle search-bar mx-lg-2"
+                    href="/website/preciousmetals/preciousmetals.html"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    data-bs-toggle="dropdown"
+                    >Precious Metals</a
+                  >
+                  <ul class="dropdown-menu">
+                    <li class="list-item">
+                      <a
+                        class="dropdown-item"
+                        href="/website/preciousmetals/gold-miners.html"
+                      >
+                        Gold Miners
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/website/preciousmetals/silver-miners.html"
+                      >
+                        Silver Miners
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/website/preciousmetals/platinum-palladium-miners.html"
+                      >
+                        Platinum & Palladium Miners
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/website/preciousmetals/bullionstore.html"
+                      >
+                        Bullion Store
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/website/preciousmetals/premiumcalculator.html"
+                      >
+                        Bullion Premium Calculator
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!--End Navbar Logo-->
+          <!--Login Button-->
+          <a href="#" class="login-button">Login</a>
+          <button
+            class="navbar-toggler pe-0"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!--End Login Button-->
+        </div>
+      </nav>
+    </header>
+    <!--End Navbar-->
+    <!--Hero Section-->
+    <section class="hero-section">
+      <div class="container text-white flex-column">
+        <!--Bullion Premium Header-->
+        <div class="row mb-3">
+          <h1 class="bullion-headerone">
+            Frosbite | Bullion Premium Calculator
+          </h1>
+          <div class="col-xl-8 col-lg-8 col-md-8 col-sm-6 bullion-info">
+            <p class="bulliontext">
+              Welcome to Frostbite Futures’ Bullion Premium Calculator, your
+              essential tool for accurate and insightful valuation of precious
+              metals. Whether you’re a seasoned investor or a newcomer to the
+              world of bullion, our advanced calculator provides you with
+              real-time, precise estimates of the premium associated with gold,
+              silver, platinum, and other precious metals.
+            </p>
+          </div>
+        </div>
+        <!--Key Features section-->
+        <div class="row key-features">
+          <h3>Key Features</h3>
+          <div>
+            <ul class="list-group m-auto">
+              <li class="list-group-item">
+                <strong>Real-Time Data:</strong> Leverage the latest market data
+                to calculate premiums based on current market prices, ensuring
+                your valuations are as accurate as possible.
+              </li>
+              <li class="list-group-item">
+                <strong>Customizable Inputs:</strong> Tailor your calculations
+                with adjustable parameters including metal type, weight, and
+                current spot price, giving you flexibility and control over your
+                valuations.
+              </li>
+              <li class="list-group-item">
+                <strong>Comprehensive Analysis:</strong> Our calculator not only
+                provides a clear premium estimate but also offers detailed
+                insights and historical data to help you make informed
+                decisions.
+              </li>
+              <li class="list-group-item">
+                <strong>User-Friendly Interface:</strong> Designed with
+                simplicity in mind, our tool allows you to perform complex
+                calculations with ease, making it accessible for both novice and
+                expert users.
+              </li>
+
+              <li class="list-group-item">
+                <strong>Secure and Reliable:</strong> Trust in the accuracy and
+                security of our calculations, backed by Frostbite Futures’
+                commitment to providing top-notch financial tools for the global
+                commodities industry.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--Steps to Use Section-->
+        <div class="row works mt-4">
+          <h3>Using the Calculator</h3>
+          <p>
+            Simply enter the required details such as the type of bullion,
+            weight, and current market price. The Bullion Premium Calculator
+            instantly processes this information and delivers an accurate
+            premium estimate, along with a breakdown of the calculation.
+            Optimize your investment strategy and stay ahead of market trends
+            with our Bullion Premium Calculator.
+          </p>
+        </div>
+        <!--Spot Price Row and Datafields-->
+        <div class="row spot-prices-row align-items-center">
+          <div class="spot-price-field col-xl-3 col-lg-3 col-md-3 col-sm-6">
+            <span class="spot-label">Gold Spot:</span>
+            <span id="goldSpotPrice" class="spot-value"></span>
+          </div>
+          <div class="spot-price-field col-xl-3 col-lg-3 col-md-3 col-sm-6">
+            <span class="spot-label">Silver Spot:</span>
+            <span id="silverSpotPrice" class="spot-value"></span>
+          </div>
+          <div class="spot-price-field col-xl-3 col-lg-3 col-md-3 col-sm-6">
+            <span class="spot-label">Platinum Spot:</span>
+            <span id="platinumSpotPrice" class="spot-value"></span>
+          </div>
+          <div class="spot-price-field col-xl-3 col-lg-3 col-md-3 col-sm-6">
+            <span class="spot-label">Palladium Spot:</span>
+            <span id="palladiumSpotPrice" class="spot-value"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--End Hero Section-->
+
+    <!--Footer-->
+    <footer class="bg-dark text-white pt-5 pb-4 border-top">
+      <div class="container text-center text-md-left">
+        <div class="row text-center text-md-left">
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-1">
+            <h5 class="text-uppercase mb-4 font-weight-bold search-bar">
+              Frostbite Futures
+            </h5>
+            <p>
+              Frostbite Futures is your premier destination for industry-leading
+              news, insightful commentary, and advanced tools tailored to the
+              global commodities market. We specialize in providing retail and
+              professional investors with the information and resources they
+              need to make informed decisions and drive strategic growth.
+            </p>
+          </div>
+          <!--Section 1-->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-1">
+            <h5 class="text-uppercase mb-4 font-weight-bold search-bar">
+              Products
+            </h5>
+            <p>
+              <a href="#" class="text-white" style="text-decoration: none"
+                >Example 1</a
+              >
+            </p>
+            <p>
+              <a href="#" class="text-white" style="text-decoration: none"
+                >Example 2</a
+              >
+            </p>
+            <p>
+              <a href="#" class="text-white" style="text-decoration: none"
+                >Example 3</a
+              >
+            </p>
+            <p>
+              <a href="#" class="text-white" style="text-decoration: none"
+                >Example 4</a
+              >
+            </p>
+          </div>
+          <!--Useful Links Section-->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-1">
+            <h5 class="text-uppercase mb-4 font-weight-bold search-bar">
+              Useful Links
+            </h5>
+            <p>
+              <a href="#" class="text-white" style="text-decoration: none"
+                >Example 1</a
+              >
+            </p>
+            <p>
+              <a href="#" class="text-white" style="text-decoration: none"
+                >Example 2</a
+              >
+            </p>
+            <p>
+              <a href="#" class="text-white" style="text-decoration: none"
+                >Example 3</a
+              >
+            </p>
+            <p>
+              <a href="#" class="text-white" style="text-decoration: none"
+                >Example 4</a
+              >
+            </p>
+          </div>
+          <!--Social Media Section-->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-1">
+            <h5 class="text-uppercase mb-4 font-weight-bold search-bar">
+              Contact Us
+            </h5>
+            <p>
+              <i class="bi bi-house mr-3"></i> Calgary, Alberta T3H 4J3, Canada
+            </p>
+            <p><i class="bi bi-telephone mr-3"></i> 403-671-2792</p>
+            <p><i class="bi bi-inbox mr-3"></i>info@frostbitefutures.com</p>
+          </div>
+        </div>
+        <hr class="mb-4" />
+        <!--Copyright-->
+        <div class="row align-items-center">
+          <div class="col-md-7 col-lg-8">
+            <p>
+              Copyright 2024 All Rights Reserved by:
+              <a href="#" style="text-decoration: none">
+                <strong class="search-bar">Frostbite Futures</strong>
+              </a>
+            </p>
+          </div>
+          <!--Social Media Links-->
+          <div class="col-md-5 col-lg-4">
+            <div class="text-center text-md-right">
+              <ul class="list-inline">
+                <li class="list-inline-item">
+                  <a href="#"
+                    ><i
+                      class="bi bi-twitter btn-floating btn-sm social_icon"
+                    ></i
+                  ></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#"
+                    ><i
+                      class="bi bi-linkedin btn-floating btn-sm social_icon"
+                    ></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--End Footer-->
+    <!--Boostrap CSS & JS Script-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!--This script API calls and updates spot prices-->
+    <script type="module" src="/javascript/spotPrices.js"></script>
+  </body>
+</html>

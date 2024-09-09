@@ -88,9 +88,9 @@
 
 
 .hero-section .container {
-    height: 100vh;
-    z-index: 1;
-    position: relative;
+    height: auto;
+    padding-top: 10rem;
+    padding-bottom: 15rem;
 }
 
 .form-control {
@@ -128,3 +128,40 @@ h5.search-bar:hover {
 .dropdown-item {
     font-size: smaller;
 }
+
+/* Precious Metals CSS */
+.bulliontext {
+    font-size: medium;
+    border-bottom: 2px solid #B370B0; /* Black border (adjust color and width as needed) */
+    display: inline-block; /* Ensures the border spans only the text width */
+    padding-bottom: 5px; /* Optional: adds space between the text and the border */
+    margin-bottom: 20px;
+  }
+  
+.list-group-item {
+    border: none;
+    background-color: transparent;
+    color: white;
+}
+
+.key-features {
+    border-bottom: 2px solid #B370B0;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.spot-prices-row {
+    border-top: 1px solid #07d1d1;
+    border-bottom: 1px solid #07d1d1;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.spot-label {
+    margin-right: 5px;
+    margin-left: 5px;
+    color: #058d8d;
+    font-weight: 600;
+}
+
+.spot-value {}
