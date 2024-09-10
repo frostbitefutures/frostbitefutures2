@@ -41,10 +41,10 @@
   <body>
     <!--Navbar-->
     <header>
-      <nav class="navbar bg-dark text-white navbar-expand-lg fixed-top">
+      <nav class="navbar bg-dark text-white navbar-expand-lg sticky-top">
         <div class="container-fluid">
           <!--Navbar Logo-->
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="/index.html">
             <img
               src="/images/White logo - no background.png"
               alt="Frostbite Futures Logo"
@@ -75,7 +75,7 @@
                   <a
                     class="nav-link mx-lg-2 active"
                     aria-current="page"
-                    href="index.html"
+                    href="/index.html"
                     style="color: white"
                     >Home</a
                   >
@@ -369,7 +369,7 @@
     <!--End Navbar-->
     <!--Hero Section-->
     <section class="hero-section">
-      <div class="container text-white flex-column">
+      <div class="container text-white flex-column" id="calcone">
         <!--Bullion Premium Header-->
         <div class="row mb-3">
           <h1 class="bullion-headerone">
@@ -456,8 +456,298 @@
           </div>
         </div>
       </div>
+      <!--Calculator Container-->
+      <div class="container calculator-container text-white flex-column">
+        <!--Libary Form-->
+        <div class="row align-items-center justify-content-center">
+          <div class="col">
+            <h4 class="text-start mb-3">Select a Product From Our Library</h4>
+            <form id="bullionLibrary">
+              <div class="input-group mb-3">
+                <span class="input-group-text">Search Product</span>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="productSearch"
+                  aria-label="Search for Product by Typing"
+                  placeholder="Eg: 100 Gram Gold Bar | Valcambi"
+                  list="productSuggestions"
+                  required
+                />
+                <datalist id="productSuggestions"></datalist>
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text">Spot Price</span>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="spotPriceSearch"
+                  aria-label="Current Metal Spot Price"
+                  placeholder="Value will autofill"
+                  required
+                  step="0.01"
+                  readonly
+                />
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text">Weight (toz)</span>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="weightSearch"
+                  aria-label="Bullion Product Metal Weight"
+                  placeholder="Value will autofill"
+                  required
+                  step="0.01"
+                  readonly
+                />
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text">Selling Price</span>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="sellingPriceSearch"
+                  aria-label="Current Product Selling Price"
+                  placeholder="Enter Selling Price"
+                  required
+                  step="0.01"
+                />
+              </div>
+              <div class="text-start mb-5">
+                <button type="submit" class="btn me-3" id="searchSubmit">
+                  Calculate Premium
+                </button>
+                <button type="reset" class="btn" id="searchReset">
+                  Clear Data
+                </button>
+              </div>
+            </form>
+            <div
+              class="row mt-2"
+              id="resultContainerSearch"
+              style="display: none"
+            >
+              <div class="col-md-6 text-start">
+                <h5>Calculated Premium</h5>
+                <div class="input-group mb-1">
+                  <span class="input-group-text">Premium (/oz)</span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="premiumResultSearch"
+                    readonly
+                  />
+                </div>
+                <div class="input-group mb-1">
+                  <span class="input-group-text">Premium (%)</span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="percentResultSearch"
+                    readonly
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Troy Weight Form-->
+        <div class="row align-items-center justify-content-center">
+          <div class="col calculator-col">
+            <h4 class="text-start mb-3">Products with Troy oz Weight</h4>
+            <form id="calculatorForm">
+              <div class="input-group mb-3">
+                <span class="input-group-text">Metal Type</span>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="ozType"
+                  aria-label="Select Metal Type"
+                  placeholder="Select Metal Type"
+                  list="datalistOptions"
+                  required
+                />
+                <datalist id="datalistOptions">
+                  <option value="Gold"></option>
+                  <option value="Silver"></option>
+                  <option value="Platinum"></option>
+                  <option value="Palladium"></option>
+                </datalist>
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text">Spot Price</span>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="troySpotPrice"
+                  aria-label="Current Metal Spot Price"
+                  placeholder="Enter Spot Price"
+                  required
+                  step="0.01"
+                />
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text">Weight (toz)</span>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="weightTroy"
+                  aria-label="Bullion Product Metal Weight"
+                  placeholder="Enter Metal Weight"
+                  required
+                  step="0.01"
+                />
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text">Selling Price</span>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="troySellingPrice"
+                  aria-label="Current Product Selling Price"
+                  placeholder="Enter Selling Price"
+                  required
+                  step="0.01"
+                />
+              </div>
+              <div class="text-start mb-5">
+                <button type="submit" class="btn me-3" id="troySubmit">
+                  Calculate Premium
+                </button>
+                <button type="reset" class="btn" id="troyReset">
+                  Clear Data
+                </button>
+              </div>
+            </form>
+            <div class="row" id="resultContainer" style="display: none">
+              <div class="col-auto text-start">
+                <div class="input-group mb-1">
+                  <span class="input-group-text" id="premiumLabelDollar"
+                    >Premium (/oz)</span
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="premiumResult"
+                    readonly
+                  />
+                </div>
+                <div class="input-group">
+                  <span class="input-group-text" id="premiumLabelPercent"
+                    >Premium (%)</span
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="premiumResultPercent"
+                    readonly
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Gram Weight Form-->
+        <div class="row align-items-center justify-content-center">
+          <div class="col">
+            <h4 class="text-start mb-3">Products with Gram Weight</h4>
+            <form id="calculatorFormGram">
+              <div class="input-group mb-3">
+                <span class="input-group-text">Metal Type</span>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="metalTypeGram"
+                  aria-label="Select Metal Type"
+                  placeholder="Select Metal Type"
+                  list="datalistOptions"
+                  required
+                />
+                <datalist id="datalistOptions">
+                  <option value="Gold"></option>
+                  <option value="Silver"></option>
+                  <option value="Platinum"></option>
+                  <option value="Palladium"></option>
+                </datalist>
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text">Spot Price</span>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="spotPriceGram"
+                  aria-label="Current Metal Spot Price"
+                  placeholder="Enter Spot Price"
+                  required
+                  step="0.01"
+                />
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text">Weight (gram)</span>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="weightGram"
+                  aria-label="Bullion Product Metal Weight"
+                  placeholder="Enter Metal Weight"
+                  required
+                  step="0.01"
+                />
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text">Selling Price</span>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="sellingPriceGram"
+                  aria-label="Current Product Selling Price"
+                  placeholder="Enter Selling Price"
+                  required
+                  step="0.01"
+                />
+              </div>
+              <div class="text-start mb-5">
+                <button type="submit" class="btn me-3" id="gramSubmit">
+                  Calculate Premium
+                </button>
+                <button type="reset" class="btn" id="gramReset">
+                  Clear Data
+                </button>
+              </div>
+            </form>
+            <div
+              class="row mt-2"
+              id="resultContainerGram"
+              style="display: none"
+            >
+              <div class="col-md-6 text-start">
+                <h5>Calculated Premium</h5>
+                <div class="input-group mb-1">
+                  <span class="input-group-text">Premium (/oz)</span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="premiumResultGram"
+                    readonly
+                  />
+                </div>
+                <div class="input-group">
+                  <span class="input-group-text">Premium (%)</span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="premiumResultGramPercent"
+                    readonly
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--End Calculator Container-->
     </section>
-    <!--End Hero Section-->
 
     <!--Footer-->
     <footer class="bg-dark text-white pt-5 pb-4 border-top">
@@ -583,5 +873,17 @@
     ></script>
     <!--This script API calls and updates spot prices-->
     <script type="module" src="/javascript/spotPrices.js"></script>
+    <!--This script holds the product library array-->
+    <script type="module" src="/javascript/products.js"></script>
+    <!--This script filters the product library as the user searches and calculates premium-->
+    <script type="module" src="/javascript/arrayprem2.js"></script>
+    <!--This scripts calulates Troy Premium-->
+    <script type="module" src="/javascript/troypremium.js"></script>
+    <!--This scripts calculates Gram Premium-->
+    <script type="module" src="/javascript/grampremium.js"></script>
+    <!--This script hides the premium block once user clears data -->
+    <script type="module" src="/javascript/hidepremium.js"></script>
+    <!-- Script updates spot prices after user selects product or metal type-->
+    <script type="module" src="/javascript/spotUpdates.js"></script>
   </body>
 </html>

@@ -1,4 +1,11 @@
+/* Color Codes Used:
+Dark Blue - #058d8d
+Light Blue - #07d1d1
+Grey - #666666
+Dark Purple - #B370B0
+Light Purple - #a861a4
 
+*/
 
 * {
     font-family: Arial, Helvetica, sans-serif;
@@ -89,8 +96,8 @@
 
 .hero-section .container {
     height: auto;
-    padding-top: 10rem;
-    padding-bottom: 15rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .form-control {
@@ -101,20 +108,6 @@
           -webkit-appearance: none;
           margin: 0;
 } }
-
-/* Footer CSS */
-.social_icon:hover {
-    color: #07d1d1;
-    text-decoration: underline;
-}
-
-.social_icon {
-    font-size: 23px;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-}
-
-/* End Footer CSS */
 
 h5.search-bar  {
     color: #058d8d;
@@ -164,4 +157,64 @@ h5.search-bar:hover {
     font-weight: 600;
 }
 
-.spot-value {}
+.calculator-container {
+    padding-top: -500px;
+}
+
+.input-group-text {
+background-color:#058d8d;
+color: white;
+width: 8.5rem;
+border-radius: 10px;
+}
+
+.form-control {
+    max-width: 20rem;
+    border-radius: 10px;
+}
+
+#resultContainer {
+    max-width: 35em;
+    margin-top: -2rem;
+    padding-bottom: 2rem;
+}
+
+#premiumLabelDollar, #premiumLabelPercent {
+    border-color: transparent;
+    background-color: #666666;
+
+}
+
+#premiumResult, #premiumResultPercent {
+    border-color: #666666;
+    background-color: transparent;
+    color: #ffffff;
+    max-width: fit-content;
+}
+
+#troySubmit, #troyReset, #gramSubmit, #gramReset, #searchSubmit, #searchReset {
+    border-color: #B370B0;
+    color: #ffffff;
+}
+#troySubmit:hover, #troyReset:hover, #gramSubmit:hover, #gramReset:hover, #searchSubmit:hover, #searchReset:hover {
+    background-color: #a861a4;
+    color: #ffffff;
+}
+
+
+/* End Precious Metals CSS */
+
+
+/* Footer CSS */
+.social_icon:hover {
+    color: #07d1d1;
+    text-decoration: underline;
+}
+
+.social_icon {
+    font-size: 23px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* End Footer CSS */
