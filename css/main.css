@@ -123,9 +123,14 @@ h5.search-bar:hover {
 }
 
 /* Precious Metals CSS */
+.introduction-container hr {
+    border-color:#07d1d1;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+}
+
 .bulliontext {
-    font-size: medium;
-    border-bottom: 2px solid #B370B0; /* Black border (adjust color and width as needed) */
+    font-size: medium; /* Black border (adjust color and width as needed) */
     display: inline-block; /* Ensures the border spans only the text width */
     padding-bottom: 5px; /* Optional: adds space between the text and the border */
     margin-bottom: 20px;
@@ -138,7 +143,6 @@ h5.search-bar:hover {
 }
 
 .key-features {
-    border-bottom: 2px solid #B370B0;
     display: inline-block;
     padding-bottom: 5px;
 }
@@ -148,6 +152,7 @@ h5.search-bar:hover {
     border-bottom: 1px solid #07d1d1;
     padding-top: 5px;
     padding-bottom: 5px;
+    margin-bottom: -2rem;
 }
 
 .spot-label {
@@ -173,19 +178,19 @@ border-radius: 10px;
     border-radius: 10px;
 }
 
-#resultContainer {
+#resultContainer, #resultContainerSearch, #resultContainerGram {
     max-width: 35em;
     margin-top: -2rem;
     padding-bottom: 2rem;
 }
 
-#premiumLabelDollar, #premiumLabelPercent {
+#premiumLabelDollar, #premiumLabelPercent, #premiumLabelSearchDollar, #premiumLabelSearchPercent, #premiumLabelGramDollar, #premiumLabelGramPercent {
     border-color: transparent;
     background-color: #666666;
 
 }
 
-#premiumResult, #premiumResultPercent {
+#premiumResult, #premiumResultPercent, #premiumResultSearch, #percentResultSearch, #premiumResultGram, #premiumResultGramPercent {
     border-color: #666666;
     background-color: transparent;
     color: #ffffff;
@@ -199,6 +204,41 @@ border-radius: 10px;
 #troySubmit:hover, #troyReset:hover, #gramSubmit:hover, #gramReset:hover, #searchSubmit:hover, #searchReset:hover {
     background-color: #a861a4;
     color: #ffffff;
+}
+
+.premium-table-container, hr {
+    border-color:#07d1d1;
+    margin-top: -1.5rem;
+}
+
+.premium-table-container h3 {
+    margin-left: -10px;
+}
+
+.premium-table-container th {
+    border-bottom: #a861a4 3px solid;
+}
+
+.premium-table-container tr {
+    border-bottom: #058d8d 1px solid;
+}
+
+.bullion-information-container hr {
+    border-color:#07d1d1;
+    margin-top: -3rem;
+}
+
+.bullion-information-container .btn {
+    background-color:transparent;
+    border-color: #B370B0;
+    font-size: 16px;
+    color: white;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.bullion-information-container .btn:hover {
+    background-color: #a861a4;
 }
 
 
@@ -215,6 +255,15 @@ border-radius: 10px;
     font-size: 23px;
     color: #ffffff;
     text-decoration: none;
+}
+
+.copyrights {
+    color:#058d8d
+}
+
+.copyrights:hover {
+    color:#07d1d1;
+    text-decoration: underline;
 }
 
 /* End Footer CSS */

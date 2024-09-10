@@ -369,7 +369,11 @@
     <!--End Navbar-->
     <!--Hero Section-->
     <section class="hero-section">
-      <div class="container text-white flex-column" id="calcone">
+      <!--Introduction Container-->
+      <div
+        class="container introduction-container text-white flex-column"
+        id="calcone"
+      >
         <!--Bullion Premium Header-->
         <div class="row mb-3">
           <h1 class="bullion-headerone">
@@ -436,6 +440,7 @@
             with our Bullion Premium Calculator.
           </p>
         </div>
+        <hr />
         <!--Spot Price Row and Datafields-->
         <div class="row spot-prices-row align-items-center">
           <div class="spot-price-field col-xl-3 col-lg-3 col-md-3 col-sm-6">
@@ -523,15 +528,12 @@
                 </button>
               </div>
             </form>
-            <div
-              class="row mt-2"
-              id="resultContainerSearch"
-              style="display: none"
-            >
+            <div class="row" id="resultContainerSearch" style="display: none">
               <div class="col-md-6 text-start">
-                <h5>Calculated Premium</h5>
                 <div class="input-group mb-1">
-                  <span class="input-group-text">Premium (/oz)</span>
+                  <span class="input-group-text" id="premiumLabelSearchDollar"
+                    >Premium (/oz)</span
+                  >
                   <input
                     type="text"
                     class="form-control"
@@ -540,7 +542,9 @@
                   />
                 </div>
                 <div class="input-group mb-1">
-                  <span class="input-group-text">Premium (%)</span>
+                  <span class="input-group-text" id="premiumLabelSearchPercent"
+                    >Premium (%)</span
+                  >
                   <input
                     type="text"
                     class="form-control"
@@ -707,7 +711,7 @@
                   step="0.01"
                 />
               </div>
-              <div class="text-start mb-5">
+              <div class="text-start mb-3">
                 <button type="submit" class="btn me-3" id="gramSubmit">
                   Calculate Premium
                 </button>
@@ -722,9 +726,10 @@
               style="display: none"
             >
               <div class="col-md-6 text-start">
-                <h5>Calculated Premium</h5>
                 <div class="input-group mb-1">
-                  <span class="input-group-text">Premium (/oz)</span>
+                  <span class="input-group-text" id="premiumLabelGramDollar"
+                    >Premium (/oz)</span
+                  >
                   <input
                     type="text"
                     class="form-control"
@@ -733,7 +738,9 @@
                   />
                 </div>
                 <div class="input-group">
-                  <span class="input-group-text">Premium (%)</span>
+                  <span class="input-group-text" id="premiumLabelGramPercent"
+                    >Premium (%)</span
+                  >
                   <input
                     type="text"
                     class="form-control"
@@ -746,7 +753,491 @@
           </div>
         </div>
       </div>
-      <!--End Calculator Container-->
+      <!--Premium Table Container-->
+      <div class="container premium-table-container text-white flex-column">
+        <hr />
+        <!--Gold Premium table-->
+        <div class="row">
+          <h3>Gold Premium Table</h3>
+          <table class="table table-dark table-hover table-sm">
+            <caption style="color: white">
+              Gold Bullion Premium Range Table with Notes
+            </caption>
+            <thead>
+              <tr class="table-dark">
+                <th class="table-dark" scope="col">
+                  <strong>Premium</strong>
+                </th>
+                <th class="table-dark px-3" scope="col">
+                  <strong>Notes</strong>
+                </th>
+                <th class="table-dark" id="productsTd">
+                  <strong>Recommended Products</strong>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>0.5% to 1.99%</td>
+                <td class="px-3">
+                  This is a great premium for bullion investors. This will keep
+                  your cost over spot low, which maximizes your return on
+                  investment (ROI) and potential profits. These low premiums are
+                  primarily found with larger sized gold bars.
+                </td>
+                <td>
+                  <ul class="list-group list-group-horizontal">
+                    <a
+                      href="#"
+                      class="list-group-item list-group-item-action list-group-item-dark"
+                      >1 Kilo Gold Bar | Varied Mints</a
+                    >
+                    <a
+                      href="#"
+                      class="list-group-item list-group-item-action list-group-item-dark"
+                    >
+                      100 Gram Gold Bar | Varied Mints</a
+                    >
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>2.0% to 2.99%</td>
+                <td class="px-3">
+                  This is also a good premium for bullion investors looking to
+                  invest in bullion at low premiums, and willing to pay a
+                  slightly higher premium for smaller sized products. These
+                  premiums are often found in 1 oz Gold Bars and backdated
+                  (older year) gold coins.
+                </td>
+                <td>
+                  <ul class="list-group list-group-horizontal">
+                    <a
+                      href="#"
+                      class="list-group-item list-group-item-action list-group-item-dark"
+                      >1 oz Gold Bars | Varied Mints</a
+                    >
+                    <a
+                      href="#"
+                      class="list-group-item list-group-item-action list-group-item-dark"
+                      >1 oz Gold Maple Leaf | RCM</a
+                    >
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>3.0% to 5.99%</td>
+                <td class="px-3">
+                  This is a fair premium for new year gold bullion products,
+                  higher premium government coins, as well as some gram
+                  products. It is important to keep in mind the higher the
+                  premium paid, the higher an investor's average cost base will
+                  be on their bullion holdings.
+                </td>
+                <td>
+                  <ul class="list-group list-group-horizontal">
+                    <a
+                      href="#"
+                      class="list-group-item list-group-item-action list-group-item-dark"
+                      >1 oz Gold American Eagle | US Mint</a
+                    >
+                    <a
+                      href="#"
+                      class="list-group-item list-group-item-action list-group-item-dark"
+                      >20 Gram Gold Bar | Varied Mints</a
+                    >
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>6.0% to 8.99%</td>
+                <td class="px-3">
+                  Fractional gold coins and smaller sized gram bars carry
+                  premiums within this range. While higher than other, lower
+                  premium bullion investment options, products costing these
+                  premiums are still a good option for investors looking to buy
+                  and sell in smaller increments.
+                </td>
+                <td>
+                  <ul class="list-group list-group-horizontal">
+                    <a
+                      href="#"
+                      class="list-group-item list-group-item-action list-group-item-dark"
+                      >1/2 oz Gold Maple Leaf | RCM</a
+                    >
+                    <a
+                      href="#"
+                      class="list-group-item list-group-item-action list-group-item-dark"
+                      >10 Gram Gold Bar | Varied Mints</a
+                    >
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>9.0% to 14.99%</td>
+                <td class="px-3">
+                  We're nearing the top of the premium cost for gold bullion
+                  products. Products within this range consist primarily of very
+                  small sized gold coins and gram gold bars. These products are
+                  best suited for investors on smaller budgets and/or those
+                  looking to buy in small sizes for bartering purposes in the
+                  future.
+                </td>
+                <td>
+                  <ul class="list-group list-group-horizontal">
+                    <a
+                      href="#"
+                      class="list-group-item list-group-item-action list-group-item-dark"
+                      >1/4 oz Gold Maple Leaf | RCM</a
+                    >
+                    <a
+                      href="#"
+                      class="list-group-item list-group-item-action list-group-item-dark"
+                      >5 Gram Gold Bar | Varied Mints</a
+                    >
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>+15.0%</td>
+                <td class="px-3">
+                  We recommend not purchasing gold bullion if the premium
+                  exceeds 15%, as gold spot prices will need to increase
+                  significantly before investors will break even on their
+                  purchase. However, if needed to purchase in this range, we
+                  recommend the following products.
+                </td>
+                <td>
+                  <ul class="list-group list-group-horizontal">
+                    <a
+                      href="#"
+                      class="list-group-item list-group-item-action list-group-item-dark"
+                      >1/10 oz Gold Maple Leaf | RCM</a
+                    >
+                    <a
+                      href="#"
+                      class="list-group-item list-group-item-action list-group-item-dark"
+                      >1 Gram Gold Bar | Varied Mints</a
+                    >
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="4">
+                  <strong>Important Note:</strong> <br />The bullion premium
+                  table provided here is for informational purposes only. Actual
+                  bullion prices may vary depending on factors such as the spot
+                  price, the exchange rate, and the type of product purchased.
+                  <br /><br />
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+        <br />
+        <hr />
+        <!--Silver Premium Table-->
+        <div class="row">
+          <h3>Silver Premium Table</h3>
+          <table class="table table-dark table-striped table-hover table-sm">
+            <caption style="color: white">
+              Silver Bullion Premium Range Table with Notes
+            </caption>
+            <thead>
+              <tr class="table-dark">
+                <th class="table-dark" scope="col">
+                  <strong>Premium</strong>
+                </th>
+                <th class="table-dark px-3" scope="col">
+                  <strong>Notes</strong>
+                </th>
+                <th class="table-dark">
+                  <strong>Recommended Products</strong>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>0.5% to 4.99%</td>
+                <td class="px-3">
+                  This is an excellent premium for silver bullion investors,
+                  typically seen in large silver bars. Low premiums help
+                  maximize ROI, making these products an attractive option for
+                  long-term investment.
+                </td>
+                <td>
+                  <ul class="list-group list-group-horizontal">
+                    <a
+                      href="#"
+                      class="list-group-item list-group-item-action list-group-item-dark"
+                      >1000 oz Silver Bar | Varied Mints</a
+                    >
+                    <a
+                      href="#"
+                      class="list-group-item list-group-item-action list-group-item-dark"
+                      >100 oz Silver Bar | Varied Mints</a
+                    >
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>5.0% to 7.99%</td>
+                <td class="px-3">
+                  A good premium range for silver investors, often found with
+                  mid-sized bars and rounds. These premiums provide a balance
+                  between cost and liquidity, making them ideal for diverse
+                  investment strategies.
+                </td>
+                <td>
+                  <ul class="list-group list-group-horizontal">
+                    <a
+                      href="#"
+                      class="list-group-item list-group-item-action list-group-item-dark"
+                      >10 oz Silver Bar | Varied Mints</a
+                    >
+                    <a
+                      href="#"
+                      class="list-group-item list-group-item-action list-group-item-dark"
+                      >1 oz Silver Round | Varied Mints</a
+                    >
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>8.0% to 12.99%</td>
+                <td class="px-3">
+                  This premium range is common for government-minted coins and
+                  other popular silver products. While slightly higher, these
+                  products often offer added security and recognizability, which
+                  can be valuable for resale.
+                </td>
+                <td>
+                  <ul class="list-group list-group-horizontal">
+                    <a
+                      href="#"
+                      class="list-group-item list-group-item-action list-group-item-dark"
+                      >1 oz Silver Britannia | Royal Mint</a
+                    >
+                    <a
+                      href="#"
+                      class="list-group-item list-group-item-action list-group-item-dark"
+                      >1 oz Silver Maple Leaf | RCM</a
+                    >
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>13.0% to 17.99%</td>
+                <td class="px-3">
+                  Premiums in this range are typically seen with popular silver
+                  coins like the American Eagle. These coins are highly sought
+                  after for their liquidity and widespread recognition, making
+                  them a solid choice for many investors.
+                </td>
+                <td>
+                  <ul class="list-group list-group-horizontal">
+                    <a
+                      href="#"
+                      class="list-group-item list-group-item-action list-group-item-dark"
+                      >1 oz Silver American Eagle | US Mint</a
+                    >
+                    <a
+                      href="#"
+                      class="list-group-item list-group-item-action list-group-item-dark"
+                      >10 oz Silver Maple Leaf | RCM</a
+                    >
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>18.0% to 24.99%</td>
+                <td class="px-3">
+                  Higher premiums in this range are usually associated with
+                  special edition or limited mintage coins. While they carry a
+                  higher cost, these products are often collectible and may
+                  appreciate in value over time.
+                </td>
+                <td>
+                  <ul class="list-group list-group-horizontal">
+                    <a
+                      href="#"
+                      class="list-group-item list-group-item-action list-group-item-dark"
+                      >10 oz Silver America the Beautiful | US Mint</a
+                    >
+                    <a
+                      href="#"
+                      class="list-group-item list-group-item-action list-group-item-dark"
+                      >1 oz Silver Libertad | Mexican Mint</a
+                    >
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>+25.0%</td>
+                <td class="px-3">
+                  We recommend caution with premiums above 25%, as it may take a
+                  significant rise in spot prices to achieve a good ROI.
+                  However, if necessary, the following products might be
+                  considered for their collectible value.
+                </td>
+                <td>
+                  <ul class="list-group list-group-horizontal">
+                    <a
+                      href="#"
+                      class="list-group-item list-group-item-action list-group-item-dark"
+                      >1 oz Silver American Eagle Proof Coin | US Mint</a
+                    >
+                    <a
+                      href="#"
+                      class="list-group-item list-group-item-action list-group-item-dark"
+                      >1/10 oz Silver Round | Varied Mints</a
+                    >
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="4">
+                  <strong>Important Note:</strong> <br />The bullion premium
+                  table provided here is for informational purposes only. Actual
+                  bullion prices may vary depending on factors such as the spot
+                  price, the exchange rate, and the type of product purchased.
+                  <br />
+                  <br />
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+      <!--Understanding Bullion Premiums Container-->
+      <div
+        class="container bullion-information-container text-white flex-column"
+      >
+        <hr />
+        <h2>Understanding Bullion Premiums</h2>
+        <!--Card Group-->
+        <div class="row">
+          <div class="card-group">
+            <div class="card bg-dark text-white">
+              <img src="..." class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">What are Bullion Premiums?</h5>
+                <p class="card-text">
+                  When purchasing physical precious metals like gold, silver,
+                  platinum, or palladium, the price you pay is usually higher
+                  than the spot price—the current market price for raw,
+                  unrefined metal. This additional cost is known as the "bullion
+                  premium." The bullion premium is the markup applied by dealers
+                  to cover costs like refining, minting, distribution, and
+                  profit margins.
+                </p>
+              </div>
+              <div class="card-footer mb-2">
+                <small class="text-body-secondary">
+                  <a href="#" class="btn" id="bullionPremiumButton"
+                    >Buy From Our Bullion Store</a
+                  >
+                </small>
+              </div>
+            </div>
+            <div class="card bg-dark text-white">
+              <img src="..." class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Why Are Bullion Premiums Important?</h5>
+                <p class="card-text">
+                  Bullion premiums play a crucial role in determining the actual
+                  cost of your investment. A higher premium means you are paying
+                  more above the spot price, which can affect your overall
+                  returns. Understanding premiums helps you make more informed
+                  decisions, ensuring that you get the best value for your
+                  investment.
+                </p>
+              </div>
+              <div class="card-footer mb-2">
+                <small class="text-body-secondary">
+                  <a href="#" class="btn" id="bullionPremiumButton"
+                    >Buy Low Premium Silver Products</a
+                  >
+                </small>
+              </div>
+            </div>
+            <div class="card bg-dark text-white">
+              <img src="..." class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Why Is It Important to Pay a Low Premium?
+                </h5>
+                <p class="card-text">
+                  Paying a low premium is essential because it directly impacts
+                  the profitability of your investment. A high premium increases
+                  the amount you need the metal's price to rise before you can
+                  break even, let alone make a profit. By minimizing the
+                  premium, you reduce the initial cost of your investment,
+                  increasing your potential return.
+                </p>
+              </div>
+              <div class="card-footer mb-2">
+                <small class="text-body-secondary">
+                  <a href="#" class="btn" id="bullionPremiumButton"
+                    >Buy Low Premium Gold Products</a
+                  >
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--More Info about Bullion Premiums-->
+        <div class="row mt-3">
+          <p class="d-inline-flex gap-1">
+            <button
+              class="btn btn-outline-info"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseExample"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+            >
+              More info about bullion premiums
+            </button>
+          </p>
+          <div class="collapse" id="collapseExample">
+            <div class="card card-body bg-dark">
+              <ul class="list-group m-auto">
+                <li class="list-group-item">
+                  <strong>Maximizing Investment Value</strong> <br />The lower
+                  the premium, the closer your purchase price is to the metal’s
+                  intrinsic value, maximizing the potential return on your
+                  investment.
+                </li>
+                <li class="list-group-item">
+                  <strong>Comparing Dealers</strong> <br />Different dealers
+                  charge different premiums for the same bullion products. Being
+                  aware of premiums allows you to compare prices across dealers
+                  and choose the one offering the best deal.
+                </li>
+                <li class="list-group-item">
+                  <strong>Market Fluctuations</strong> <br />Premiums can vary
+                  depending on market conditions, demand, and supply
+                  constraints. Understanding how and why premiums change can
+                  help you time your purchases better, ensuring you pay as
+                  little as possible.
+                </li>
+                <li class="list-group-item">
+                  <strong>Understanding True Costs</strong> <br />The premium is
+                  part of your total cost when investing in bullion. Ignoring it
+                  can lead to overestimating the value of your investment. By
+                  considering the premium, you get a clearer picture of your
+                  true costs and potential profits.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!--Footer-->
@@ -762,7 +1253,7 @@
               news, insightful commentary, and advanced tools tailored to the
               global commodities market. We specialize in providing retail and
               professional investors with the information and resources they
-              need to make informed decisions and drive strategic growth.
+              need to make informed decisions.
             </p>
           </div>
           <!--Section 1-->
@@ -829,14 +1320,14 @@
             <p><i class="bi bi-inbox mr-3"></i>info@frostbitefutures.com</p>
           </div>
         </div>
-        <hr class="mb-4" />
+        <hr class="mt-1" />
         <!--Copyright-->
         <div class="row align-items-center">
           <div class="col-md-7 col-lg-8">
             <p>
               Copyright 2024 All Rights Reserved by:
               <a href="#" style="text-decoration: none">
-                <strong class="search-bar">Frostbite Futures</strong>
+                <strong class="search-bar copyrights">Frostbite Futures</strong>
               </a>
             </p>
           </div>
