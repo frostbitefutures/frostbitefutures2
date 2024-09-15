@@ -5,6 +5,7 @@ export const bullionProducts = [
     name: "1 oz Gold Bar | LBMA Approved",
     metal: "Gold",
     weight: 1,
+    premium: 50,
   },
   {
     Item: 10002,
@@ -12,6 +13,7 @@ export const bullionProducts = [
     name: "5 oz Gold Bar | LBMA Approved",
     metal: "Gold",
     weight: 5,
+    premium: 40,
   },
   {
     Item: 10003,
@@ -19,6 +21,7 @@ export const bullionProducts = [
     name: "10 oz Gold Bar | LBMA Approved",
     metal: "Gold",
     weight: 10,
+    premium: 30,
   },
 ];
 

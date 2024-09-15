@@ -1,169 +1,105 @@
-    <header>
-      <nav class="navbar border-bottom border-body navbar-expand-md">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/website/index.html">
-            <img
-              src="/images/logo-black-nobk.png"
-              alt="Frostbite Futures Company Logo"
-              width="375rem"
-              height="100rem"
-            />
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a
-                  class="nav-link search-bar"
-                  aria-current="page"
-                  href="/website/about.html"
-                  text-nowrap
-                >
-                  <strong>About Us</strong>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link search-bar" href="#" text-nowrap
-                  ><strong>Valuation Tools & Indicators</strong></a
-                >
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle search-bar"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <strong>Energy</strong>
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item" href="#"> Crude Oil </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#"> Brent </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#"> Natural Gas </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#"> Coal </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#"> Uranium </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle search-bar"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                  text-nowrap
-                >
-                  <strong>Industrial Metals</strong>
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item" href="#"> Copper </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#"> Steel </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#"> Iron Ore </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#"> Lithium </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#"> Cobalt </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle search-bar"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <strong>Agriculture</strong>
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item" href="#"> Corn </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#"> Sugar </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#"> Wheat </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#"> Coffee </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#"> Milk </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle search-bar"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <strong>Precious Metals & Bullion</strong>
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item" href="#"> Gold Mining Stocks </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#"> Silver Mining Stocks </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      Platinum Mining Stocks
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#"> Bullion Store </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#"> Premium Calculator </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link search-bar" href="#"
-                  ><strong>Market News</strong></a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link search-bar" href="#"
-                  ><strong>Contact Us</strong></a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
+// Import product library
+import { bullionProducts } from "../javascript/products.js";
+console.log("Product Library Imported");
+
+// Function to update website pricing each time the user loads the webpage
+export function updateStorePricing() {
+  // This ensures the HTML page is fully loaded before the functions begin to access any elements, preventing errors from occurring
+  document.addEventListener("DOMContentLoaded", () => {
+    // Function to clean and parse spot prices
+    function cleanPrice(priceText) {
+      return parseFloat(priceText.replace(/[,$]/g, ""));
+    }
+
+    // Function to calculate product price if metal = gold
+    function calculateGoldPrice(weight, premium) {
+      return (goldSpot + premium) * weight;
+    }
+
+    // Function to calculate product price if metal = silver
+    function calculateSilverPrice(weight, premium) {
+      return (silverSpot + premium) * weight;
+    }
+
+    // Function to calculate product price if metal = platinum
+    function calculatePlatinumPrice(weight, premium) {
+      return (platinumSpot + premium) * weight;
+    }
+
+    // Function to perform the pricing update
+    function performPricingUpdate() {
+      // Apply function to spot prices and store values as const variables
+      const goldSpotElement = document.getElementById("goldSpotPrice");
+      const silverSpotElement = document.getElementById("silverSpotPrice");
+      const platinumSpotElement = document.getElementById("platinumSpotPrice");
+
+      if (!goldSpotElement || !silverSpotElement || !platinumSpotElement) {
+        console.error("Spot price elements not found");
+        return;
+      }
+
+      const goldSpot = cleanPrice(goldSpotElement.textContent);
+      const silverSpot = cleanPrice(silverSpotElement.textContent);
+      const platinumSpot = cleanPrice(platinumSpotElement.textContent);
+
+      // Iterate through the product array and find matches
+      bullionProducts.forEach((product) => {
+        const productElement = document.getElementById(product.id);
+
+        if (productElement) {
+          const name = product.name;
+          const metal = product.metal;
+          const weight = product.weight;
+          const premium = product.premium || 0; // Default premium to 0 if not defined
+
+          // Calculate the product price
+          let price;
+          switch (metal) {
+            case "Gold":
+              price = calculateGoldPrice(weight, premium).toFixed(2);
+              break;
+            case "Silver":
+              price = calculateSilverPrice(weight, premium).toFixed(2);
+              break;
+            case "Platinum":
+              price = calculatePlatinumPrice(weight, premium).toFixed(2);
+              break;
+            default:
+              console.error("Invalid metal type");
+              return;
+          }
+
+          // Update HTML elements using the new variables
+          // Update Price
+          const priceValueElement = productElement.querySelector(".price-value");
+          if (priceValueElement) {
+            priceValueElement.textContent = `$${price}`;
+          }
+
+          // Update Name
+          const nameValueElement = productElement.querySelector(".card-title");
+          if (nameValueElement) {
+            nameValueElement.textContent = name;
+          }
+        }
+      });
+    }
+
+    // Perform initial pricing update
+    performPricingUpdate();
+
+    // Set up interval to update pricing every 15 minutes (900,000 milliseconds)
+    const updateInterval = 15 * 60 * 1000;
+    setInterval(performPricingUpdate, updateInterval);
+
+    // Check for visibility change to update pricing when user returns to the page
+    document.addEventListener("visibilitychange", () => {
+      if (document.visibilityState === "visible") {
+        performPricingUpdate();
+      }
+    });
+  });
+}
+
+// Call the function once user loads the webpage
+updateStorePricing();
