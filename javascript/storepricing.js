@@ -67,6 +67,8 @@ export function updateStorePricing() {
           const weight = product.weight;
           const premium = product.premium;
 
+          console.log(`${name} | ${metal} | ${weight} | ${premium}`);
+
           // Calculate the product price
           // Switch case to determine metal type and calculate price
           let price;
@@ -93,17 +95,19 @@ export function updateStorePricing() {
 
           // Update HTML elements using the new variables
           // Update Price
-          const priceValueElement =
-            productElement.querySelector(".price-value");
+          const priceValueElement = productElement
+            .closest(".card")
+            .querySelector(".price-value");
           if (priceValueElement) {
             priceValueElement.textContent = `$${price}`;
           }
-          console.log(priceValueElement);
 
           // Update Name
-          const nameValueElement = productElement.querySelector(".card-title");
+          const nameValueElement = productElement
+            .closest(".card-body")
+            .querySelector(".card-title");
           if (nameValueElement) {
-            nameValueElement.textContent = name;
+            nameValueElement.textContent = `${name}`;
           }
         }
       });
