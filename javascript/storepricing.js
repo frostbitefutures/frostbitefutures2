@@ -34,7 +34,7 @@ export function updateStorePricing() {
 
       // Function to calculate product price if metal = gold
       function calculateGoldPrice(weight, premium) {
-        return (goldSpot + premium) * weight;
+          return (goldSpot + premium) * weight;
       }
 
       // Function to calculate product price if metal = silver
