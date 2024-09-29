@@ -8,334 +8,366 @@ Light Purple - #a861a4
 */
 
 * {
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .navbar {
-    height: 100px;
-    border-radius: 0px;
-    padding: 0.0rem;
+  height: 100px;
+  border-radius: 0px;
+  padding: 0rem;
 }
 
 .navbar-brand {
-    font-weight: 500;
-    color: #058d8d;
-    font-size: 24px;
-    transition: 0.3s color;
+  font-weight: 500;
+  color: #058d8d;
+  font-size: 24px;
+  transition: 0.3s color;
 }
 
-
 .login-button {
-    background-color: #058d8d;
-    color: white;
-    font-size: 14px;
-    padding: 8px 20px;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: 0.3s background-color;
+  background-color: #058d8d;
+  color: white;
+  font-size: 14px;
+  padding: 8px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: 0.3s background-color;
 }
 
 .login-button:hover {
-    background-color: #07d1d1;
+  background-color: #07d1d1;
 }
 
 .navbar-toggler {
-    color: #ffffff;
-    border: none;
-    font-size: 1.25rem;
+  color: #ffffff;
+  border: none;
+  font-size: 1.25rem;
 }
 
 .navbar-toggler-icon {
-    color: white !important;
-    background-color: #058d8d !important;
-    font-weight: 500;
+  color: white !important;
+  background-color: #058d8d !important;
+  font-weight: 500;
 }
 
-.navbar-toggler:focus, .btn-close:focus {
-    box-shadow: none;
-    outline: none;
+.navbar-toggler:focus,
+.btn-close:focus {
+  box-shadow: none;
+  outline: none;
 }
 
 .nav-link {
-    color: white;
-    font-weight: 500;
-    font-size:medium;
-    position: relative;
+  color: white;
+  font-weight: 500;
+  font-size: medium;
+  position: relative;
 }
 
-.nav-link:hover, .nav-link:active {
-    color: #07d1d1;
+.nav-link:hover,
+.nav-link:active {
+  color: #07d1d1;
 }
 
 @media (min-width: 991px) {
-    .nav-link:before {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 0;
-        height: 2px;
-        background-color: #058d8d;
-        visibility: hidden;
-        transition: 0.3s ease-in-out;
-    }
-    
-    .nav-link:hover::before, .nav-link.active::before {
-        width: 100%;
-        visibility: visible;
-    }
+  .nav-link:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #058d8d;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+  }
+
+  .nav-link:hover::before,
+  .nav-link.active::before {
+    width: 100%;
+    visibility: visible;
+  }
 }
 
 .hero-section {
-    background-color: #22181c;
-    background-size: cover;
-    width: 100%;
+  background-color: #22181c;
+  background-size: cover;
+  width: 100%;
 }
 
-
 .hero-section .container {
-    height: auto;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+  height: auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .form-control {
-    max-width: 300px;
-    width: 100%; /* Ensures it takes the full width of its container up to max-width */
-    input[type="number"]::-webkit-inner-spin-button,
-        input[type="number"]::-webkit-outer-spin-button {
-          -webkit-appearance: none;
-          margin: 0;
-} }
+  max-width: 300px;
+  width: 100%; /* Ensures it takes the full width of its container up to max-width */
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
 
-h5.search-bar  {
-    color: #058d8d;
+h5.search-bar {
+  color: #058d8d;
 }
 
 h5.search-bar:hover {
-    color: #07d1d1;
-    text-decoration: underline;
+  color: #07d1d1;
+  text-decoration: underline;
 }
 
 .dropdown-item {
-    font-size: smaller;
+  font-size: smaller;
 }
 
-/* Precious Metals CSS */ 
+/* Precious Metals CSS */
 .introduction-container hr {
-    border-color:#07d1d1;
-    margin-top: 0.5rem;
-    margin-bottom: 2rem;
+  border-color: #07d1d1;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
 }
 
 .bulliontext {
-    font-size: medium; /* Black border (adjust color and width as needed) */
-    display: inline-block; /* Ensures the border spans only the text width */
-    padding-bottom: 5px; /* Optional: adds space between the text and the border */
-    margin-bottom: 20px;
-  }
-  
+  font-size: medium; /* Black border (adjust color and width as needed) */
+  display: inline-block; /* Ensures the border spans only the text width */
+  padding-bottom: 5px; /* Optional: adds space between the text and the border */
+  margin-bottom: 20px;
+}
+
 .list-group-item {
-    border: none;
-    background-color: transparent;
-    color: white;
+  border: none;
+  background-color: transparent;
+  color: white;
 }
 
 .key-features {
-    display: inline-block;
-    padding-bottom: 5px;
+  display: inline-block;
+  padding-bottom: 5px;
 }
 
 .spot-prices-row {
-    border-top: 1px solid #07d1d1;
-    border-bottom: 1px solid #07d1d1;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin-bottom: -2rem;
+  border-top: 1px solid #07d1d1;
+  border-bottom: 1px solid #07d1d1;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: -2rem;
 }
 
 .spot-label {
-    margin-right: 5px;
-    margin-left: 5px;
-    color: #058d8d;
-    font-weight: 600;
+  margin-right: 5px;
+  margin-left: 5px;
+  color: #058d8d;
+  font-weight: 600;
 }
 
 .calculator-container {
-    padding-top: -500px;
+  padding-top: -500px;
 }
 
 .input-group-text {
-background-color:#058d8d;
-color: white;
-width: 8.5rem;
-border-radius: 10px;
+  background-color: #058d8d;
+  color: white;
+  width: 8.5rem;
+  border-radius: 10px;
 }
 
 .form-control {
-    max-width: 20rem;
-    border-radius: 10px;
+  max-width: 20rem;
+  border-radius: 10px;
 }
 
-#resultContainer, #resultContainerSearch, #resultContainerGram {
-    max-width: 35em;
-    margin-top: -2rem;
-    padding-bottom: 2rem;
+#resultContainer,
+#resultContainerSearch,
+#resultContainerGram {
+  max-width: 35em;
+  margin-top: -2rem;
+  padding-bottom: 2rem;
 }
 
-#premiumLabelDollar, #premiumLabelPercent, #premiumLabelSearchDollar, #premiumLabelSearchPercent, #premiumLabelGramDollar, #premiumLabelGramPercent {
-    border-color: transparent;
-    background-color: #666666;
-
+#premiumLabelDollar,
+#premiumLabelPercent,
+#premiumLabelSearchDollar,
+#premiumLabelSearchPercent,
+#premiumLabelGramDollar,
+#premiumLabelGramPercent {
+  border-color: transparent;
+  background-color: #666666;
 }
 
-#premiumResult, #premiumResultPercent, #premiumResultSearch, #percentResultSearch, #premiumResultGram, #premiumResultGramPercent {
-    border-color: #666666;
-    background-color: transparent;
-    color: #ffffff;
-    max-width: fit-content;
+#premiumResult,
+#premiumResultPercent,
+#premiumResultSearch,
+#percentResultSearch,
+#premiumResultGram,
+#premiumResultGramPercent {
+  border-color: #666666;
+  background-color: transparent;
+  color: #ffffff;
+  max-width: fit-content;
 }
 
-#troySubmit, #troyReset, #gramSubmit, #gramReset, #searchSubmit, #searchReset {
-    border-color: #B370B0;
-    color: #ffffff;
+#troySubmit,
+#troyReset,
+#gramSubmit,
+#gramReset,
+#searchSubmit,
+#searchReset {
+  border-color: #b370b0;
+  color: #ffffff;
 }
-#troySubmit:hover, #troyReset:hover, #gramSubmit:hover, #gramReset:hover, #searchSubmit:hover, #searchReset:hover {
-    background-color: #a861a4;
-    color: #ffffff;
+#troySubmit:hover,
+#troyReset:hover,
+#gramSubmit:hover,
+#gramReset:hover,
+#searchSubmit:hover,
+#searchReset:hover {
+  background-color: #a861a4;
+  color: #ffffff;
 }
 
-.premium-table-container, hr {
-    border-color:#07d1d1;
-    margin-top: -1.5rem;
+.premium-table-container,
+hr {
+  border-color: #07d1d1;
+  margin-top: -1.5rem;
 }
 
 .premium-table-container h3 {
-    margin-left: -10px;
+  margin-left: -10px;
 }
 
 .premium-table-container th {
-    border-bottom: #a861a4 3px solid;
+  border-bottom: #a861a4 3px solid;
 }
 
 .premium-table-container tr {
-    border-bottom: #058d8d 1px solid;
+  border-bottom: #058d8d 1px solid;
 }
 
 .bullion-information-container hr {
-    border-color:#07d1d1;
-    margin-top: -3rem;
+  border-color: #07d1d1;
+  margin-top: -3rem;
 }
 
 .bullion-information-container .btn {
-    background-color:transparent;
-    border-color: #B370B0;
-    font-size: 16px;
-    color: white;
-    border-radius: 10px;
-    padding: 5px 10px;
+  background-color: transparent;
+  border-color: #b370b0;
+  font-size: 16px;
+  color: white;
+  border-radius: 10px;
+  padding: 5px 10px;
 }
 
 .bullion-information-container .btn:hover {
-    background-color: #a861a4;
+  background-color: #a861a4;
 }
 
 .store-products-container .card {
-background-color: #d4d4d4;
+  background-color: #d4d4d4;
 }
 
 .store-products-container .card-title {
-    font-weight: 500;
-    font-size:large
+  font-weight: 500;
+  font-size: large;
 }
 
 .store-products-container .prices {
-    display: flex;
-    align-items: center;
-    border-bottom: #07d1d1 1px solid;
-    padding-bottom: 5px;
-    margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  border-bottom: #07d1d1 1px solid;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .price-label {
-    margin-right: 5px;
-    font-weight: 500;
+  margin-right: 5px;
+  font-weight: 500;
 }
 
 .price-value {
 }
 
 .store-products-container .product-description {
-    border-bottom: #07d1d1 1px solid;
-    padding-bottom: 5px;
-    margin-bottom: 5px;
+  border-bottom: #07d1d1 1px solid;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .store-products-container .product-description {
-    padding-bottom: 5px;
-    margin-bottom: 5px;
-    
+  padding-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .store-products-container .product-description-row {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
-
 .store-products-container .product-description-title {
-    font-size: medium;
-    max-width: fit-content;
-
+  font-size: medium;
+  max-width: fit-content;
 }
 
 .store-products-container .product-description-text {
-    font-size: small;
-    padding-right: 1rem;
-
+  font-size: small;
+  padding-right: 1rem;
 }
 
 .store-products-container .purchase-bullion {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .store-products-container .btn {
-    background-color:transparent;
-    border-color: #B370B0;
-    color: #22181c;
-    font-size: 16px;
-    border-radius: 10px;
-    padding: 5px 10px;
-    align-items: center;
+  background-color: transparent;
+  border-color: #b370b0;
+  color: #22181c;
+  font-size: 16px;
+  border-radius: 10px;
+  padding: 5px 10px;
+  align-items: center;
 }
 
 .store-products-container .btn:hover {
-    background-color: #a861a4;
-    color: #ffffff;
+  background-color: #a861a4;
+  color: #ffffff;
+}
+
+.small-bullion-card {
+  width: 225px;
+  height: 100px;
+}
+
+.small-bullion-card .card-body {
+  font-size: 1rem;
+}
+
+.small-bullion-card .product-description {
+  display: none;
 }
 
 /* End Precious Metals CSS */
 
-
 /* Footer CSS */
 .social_icon:hover {
-    color: #07d1d1;
-    text-decoration: underline;
+  color: #07d1d1;
+  text-decoration: underline;
 }
 
 .social_icon {
-    font-size: 23px;
-    color: #ffffff;
-    text-decoration: none;
+  font-size: 23px;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .copyrights {
-    color:#058d8d
+  color: #058d8d;
 }
 
 .copyrights:hover {
-    color:#07d1d1;
-    text-decoration: underline;
+  color: #07d1d1;
+  text-decoration: underline;
 }
 
 /* End Footer CSS */

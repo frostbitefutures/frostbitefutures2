@@ -1,5 +1,5 @@
 // Import product library
-import { bullionProducts } from "../javascript/products.js";
+import { bullionProducts } from "../../javascript/preciousmetals/products.js";
 console.log("Product Library Imported");
 console.log(bullionProducts);
 

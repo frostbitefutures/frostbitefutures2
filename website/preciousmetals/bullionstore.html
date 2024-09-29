@@ -416,12 +416,12 @@
       <div class="container store-products-container text-white">
         <!--Products Card-->
         <div
-          class="row row-cols-xl-3 row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-xs-1 g-4"
+          class="row row-cols-xl-3 row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-2 g-4"
         >
-        <!--1 oz Gold Bar Card-->
+          <!--1 oz Gold Bar Card-->
           <div class="col">
             <div class="card-group">
-              <div class="card h-100">
+              <div class="card bullion-card h-100">
                 <img src="..." class="card-img-top" alt="..." />
                 <div class="card-body">
                   <!--Product Name-->
@@ -480,13 +480,12 @@
                   </div>
                 </div>
               </div>
-              
             </div>
           </div>
           <!--10 oz Gold Bar Card-->
           <div class="col">
             <div class="card-group">
-              <div class="card h-100">
+              <div class="card bullion-card h-100">
                 <img src="..." class="card-img-top" alt="..." />
                 <div class="card-body">
                   <!--Product Name-->
@@ -545,13 +544,12 @@
                   </div>
                 </div>
               </div>
-              
             </div>
           </div>
           <!--1 Kilo Gold Bar Card-->
           <div class="col">
             <div class="card-group">
-              <div class="card h-100">
+              <div class="card bullion-card h-100">
                 <img src="..." class="card-img-top" alt="..." />
                 <div class="card-body">
                   <!--Product Name-->
@@ -610,13 +608,12 @@
                   </div>
                 </div>
               </div>
-              
             </div>
           </div>
           <!--1 Gram Gold Bar Card-->
           <div class="col">
             <div class="card-group">
-              <div class="card h-100">
+              <div class="card bullion-card h-100">
                 <img src="..." class="card-img-top" alt="..." />
                 <div class="card-body">
                   <!--Product Name-->
@@ -675,13 +672,12 @@
                   </div>
                 </div>
               </div>
-              
             </div>
           </div>
           <!--5 Gram Gold Bar Card-->
           <div class="col">
             <div class="card-group">
-              <div class="card h-100">
+              <div class="card bullion-card h-100">
                 <img src="..." class="card-img-top" alt="..." />
                 <div class="card-body">
                   <!--Product Name-->
@@ -740,13 +736,12 @@
                   </div>
                 </div>
               </div>
-              
             </div>
           </div>
           <!--10 Gram Gold Bar Card-->
           <div class="col">
             <div class="card-group">
-              <div class="card h-100">
+              <div class="card bullion-card h-100">
                 <img src="..." class="card-img-top" alt="..." />
                 <div class="card-body">
                   <!--Product Name-->
@@ -805,13 +800,12 @@
                   </div>
                 </div>
               </div>
-              
             </div>
           </div>
           <!--20 Gram Gold Bar Card-->
           <div class="col">
             <div class="card-group">
-              <div class="card h-100">
+              <div class="card bullion-card h-100">
                 <img src="..." class="card-img-top" alt="..." />
                 <div class="card-body">
                   <!--Product Name-->
@@ -870,13 +864,12 @@
                   </div>
                 </div>
               </div>
-              
             </div>
           </div>
           <!--50 Gram Gold Bar Card-->
           <div class="col">
             <div class="card-group">
-              <div class="card h-100">
+              <div class="card bullion-card h-100">
                 <img src="..." class="card-img-top" alt="..." />
                 <div class="card-body">
                   <!--Product Name-->
@@ -935,13 +928,12 @@
                   </div>
                 </div>
               </div>
-              
             </div>
           </div>
           <!--100 Gram Gold Bar Card-->
           <div class="col">
             <div class="card-group">
-              <div class="card h-100">
+              <div class="card bullion-card h-100">
                 <img src="..." class="card-img-top" alt="..." />
                 <div class="card-body">
                   <!--Product Name-->
@@ -1000,13 +992,12 @@
                   </div>
                 </div>
               </div>
-              
             </div>
           </div>
           <!--1 oz Gold Maple Leaf Card-->
           <div class="col">
             <div class="card-group">
-              <div class="card h-100">
+              <div class="card bullion-card h-100">
                 <img src="..." class="card-img-top" alt="..." />
                 <div class="card-body">
                   <!--Product Name-->
@@ -1064,13 +1055,12 @@
                   </div>
                 </div>
               </div>
-              
             </div>
           </div>
           <!--1 oz Gold Eagle Card-->
           <div class="col">
             <div class="card-group">
-              <div class="card h-100">
+              <div class="card bullion-card h-100">
                 <img src="..." class="card-img-top" alt="..." />
                 <div class="card-body">
                   <!--Product Name-->
@@ -1127,13 +1117,12 @@
                   </div>
                 </div>
               </div>
-              
             </div>
           </div>
           <!--1 oz Gold Buffalo Card-->
           <div class="col">
             <div class="card-group">
-              <div class="card h-100">
+              <div class="card bullion-card h-100">
                 <img src="..." class="card-img-top" alt="..." />
                 <div class="card-body">
                   <!--Product Name-->
@@ -1190,7 +1179,6 @@
                   </div>
                 </div>
               </div>
-              
             </div>
           </div>
         </div>
@@ -1320,7 +1308,16 @@
       crossorigin="anonymous"
     ></script>
     <!--This script API calls and updates spot prices-->
-    <script type="module" src="/javascript/spotPrices.js"></script>
-    <script type="module" src="/javascript/storepricing.js"></script>
+    <script
+      type="module"
+      src="/javascript/preciousmetals/spotPrices.js"
+    ></script>
+    <!-- This script iterates through the product catalog and updates prices-->
+    <script
+      type="module"
+      src="/javascript/preciousmetals/storepricing.js"
+    ></script>
+    <!-- This script reduces the size of the product cards when the viewport is small-->
+    <script type="module" src="/javascript/html/smallviewport.js"></script>
   </body>
 </html>

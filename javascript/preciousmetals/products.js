@@ -74,7 +74,7 @@ export const bullionProducts = [
   {
     Item: 10010,
     id: "1ozGML",
-    name: "1 oz Maple Leaf Gold Coin | Royal Canadian Mint",
+    name: "1 oz Maple Leaf Gold Coin | RCM",
     metal: "Gold",
     weight: 1,
     premium: 90.00,
