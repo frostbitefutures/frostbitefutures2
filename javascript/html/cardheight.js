@@ -12,11 +12,13 @@ export function equalHeight() {
     console.log(`Number of bullion cards found: ${bullionCard.length}`);
   }
   // Reset the heights
+  // auto height ensures any previous fixed heights are removed, so it only uses the natural height of the card based on content
   bullionCard.forEach((card) => {
-    card.style.height = "auto"; // This resets the height before calculating the new height
+    card.style.height = "auto";
   });
 
   // Iterate through all the cards and find the cards with the tallest height
+  // offsetHeight is a property that returns the height of an element, including content and padding
   bullionCard.forEach((card) => {
     const cardHeight = card.offsetHeight;
     if (cardHeight > cardMaxHeight) {
@@ -31,8 +33,9 @@ export function equalHeight() {
 // Throttle the function to improve resize performance
 let resizeTimeout;
 function throttleResize() {
+  // Before setting a new timeout, the existing timeout is cleared. This ensures multiple resize events are fired in quick succession
   clearTimeout(resizeTimeout);
-  resizeTimeout = setTimeout(equalHeight, 500); // Delay of 500 ms
+  resizeTimeout = setTimeout(equalHeight, 100); // Delay of 100 ms
 }
 
 // Call the function on page load and resize

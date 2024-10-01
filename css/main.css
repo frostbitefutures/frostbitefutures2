@@ -265,12 +265,33 @@ hr {
   background-color: #a861a4;
 }
 
+/* Start Filter and Sort */
+
+.filter-sort-container {
+  margin-top: -1.5rem;
+  margin-bottom: -1rem;
+}
+
+.filter-sort-container .row {
+  margin-top: -1rem;
+  margin-bottom: -1rem;
+  margin-left: 1rem;
+  max-width: fit-content;
+}
+.filter-sort-container .dropdown .btn {
+  background-color: transparent;
+}
+
+/* End Filter and Sort */
+
+/* Start Bullion Products */
+
 .store-products-container .card {
   background-color: #d4d4d4;
 }
 
 .store-products-container .card-title {
-  font-weight: 500;
+  font-weight: 600;
   font-size: large;
 }
 
@@ -319,6 +340,11 @@ hr {
   margin-top: 10px;
 }
 
+.store-products-container .price-label,
+.product-description-title {
+  color: #058d8d;
+}
+
 .store-products-container .btn {
   background-color: transparent;
   border-color: #b370b0;
@@ -347,7 +373,7 @@ hr {
   display: none;
 }
 
-/* End Precious Metals CSS */
+/* Start Bullion Products */
 
 /* Footer CSS */
 .social_icon:hover {
