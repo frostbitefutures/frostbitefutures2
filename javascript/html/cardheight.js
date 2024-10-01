@@ -35,6 +35,7 @@ let resizeTimeout;
 function throttleResize() {
   // Before setting a new timeout, the existing timeout is cleared. This ensures multiple resize events are fired in quick succession
   clearTimeout(resizeTimeout);
+  // A new timeout is set to call the equalHeight function
   resizeTimeout = setTimeout(equalHeight, 100); // Delay of 100 ms
 }
 

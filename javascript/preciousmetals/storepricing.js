@@ -1,7 +1,6 @@
 // Import product library
 import { bullionProducts } from "../../javascript/preciousmetals/products.js";
 console.log("Product Library Imported");
-console.log(bullionProducts);
 
 // Function to update website pricing each time the user loads the webpage
 export function updateStorePricing() {
@@ -34,7 +33,7 @@ export function updateStorePricing() {
 
       // Function to calculate product price if metal = gold
       function calculateGoldPrice(weight, premium) {
-          return (goldSpot + premium) * weight;
+        return (goldSpot + premium) * weight;
       }
 
       // Function to calculate product price if metal = silver
