@@ -430,11 +430,19 @@
                 class="dropdown-menu dropdown-menu-dark"
                 aria-labelledby="filterDropdown"
               >
+                <!--All Products-->
+                <li>
+                  <button class="dropdown-item filter-item" data-filter="all">
+                    All Products
+                  </button>
+                </li>
+                <!--Gold Products-->
                 <li>
                   <button class="dropdown-item filter-item" data-filter="gold">
                     Gold Products
                   </button>
                 </li>
+                <!--Silver Products-->
                 <li>
                   <!--data-filter is a custom data attribute. Used to store extra information without affecting page presentation. Allows users to define their own attributes for use later, starts with data- -->
                   <button
@@ -447,7 +455,7 @@
               </ul>
             </div>
             <!--Sort Dropdown-->
-            <div class="dropdown sort">
+            <div class="dropdown sort me-4">
               <button
                 class="btn btn-secondary dropdown-toggle"
                 type="button"
@@ -492,10 +500,15 @@
                 </li>
               </ul>
             </div>
+            <!--Reset Filter and Sort Button-->
+            <div class="clearFilter">
+              <button class="btn" type="reset" id="filterReset">
+                Clear Filters & Sort
+              </button>
+            </div>
           </div>
         </div>
       </div>
-
       <!--Products Container-->
       <div class="container store-products-container text-white">
         <!--Products Card-->
@@ -505,7 +518,7 @@
           <!--1 oz Gold Bar Card-->
           <div class="col">
             <div class="card-group">
-              <div class="card bullion-card">
+              <div class="card bullion-card" data-metal="Gold">
                 <img src="..." class="card-img-top" alt="..." />
                 <div class="card-body">
                   <!--Product Name-->
@@ -569,7 +582,7 @@
           <!--10 oz Gold Bar Card-->
           <div class="col">
             <div class="card-group">
-              <div class="card bullion-card">
+              <div class="card bullion-card" data-metal="Gold">
                 <img src="..." class="card-img-top" alt="..." />
                 <div class="card-body">
                   <!--Product Name-->
@@ -633,7 +646,7 @@
           <!--1 Kilo Gold Bar Card-->
           <div class="col">
             <div class="card-group">
-              <div class="card bullion-card">
+              <div class="card bullion-card" data-metal="Gold">
                 <img src="..." class="card-img-top" alt="..." />
                 <div class="card-body">
                   <!--Product Name-->
@@ -697,7 +710,7 @@
           <!--1 Gram Gold Bar Card-->
           <div class="col">
             <div class="card-group">
-              <div class="card bullion-card">
+              <div class="card bullion-card" data-metal="Gold">
                 <img src="..." class="card-img-top" alt="..." />
                 <div class="card-body">
                   <!--Product Name-->
@@ -760,7 +773,7 @@
           <!--5 Gram Gold Bar Card-->
           <div class="col">
             <div class="card-group">
-              <div class="card bullion-card">
+              <div class="card bullion-card" data-metal="Gold">
                 <img src="..." class="card-img-top" alt="..." />
                 <div class="card-body">
                   <!--Product Name-->
@@ -823,7 +836,7 @@
           <!--10 Gram Gold Bar Card-->
           <div class="col">
             <div class="card-group">
-              <div class="card bullion-card">
+              <div class="card bullion-card" data-metal="Gold">
                 <img src="..." class="card-img-top" alt="..." />
                 <div class="card-body">
                   <!--Product Name-->
@@ -886,7 +899,7 @@
           <!--20 Gram Gold Bar Card-->
           <div class="col">
             <div class="card-group">
-              <div class="card bullion-card">
+              <div class="card bullion-card" data-metal="Gold">
                 <img src="..." class="card-img-top" alt="..." />
                 <div class="card-body">
                   <!--Product Name-->
@@ -949,7 +962,7 @@
           <!--50 Gram Gold Bar Card-->
           <div class="col">
             <div class="card-group">
-              <div class="card bullion-card">
+              <div class="card bullion-card" data-metal="Gold">
                 <img src="..." class="card-img-top" alt="..." />
                 <div class="card-body">
                   <!--Product Name-->
@@ -1012,7 +1025,7 @@
           <!--100 Gram Gold Bar Card-->
           <div class="col">
             <div class="card-group">
-              <div class="card bullion-card">
+              <div class="card bullion-card" data-metal="Gold">
                 <img src="..." class="card-img-top" alt="..." />
                 <div class="card-body">
                   <!--Product Name-->
@@ -1075,7 +1088,7 @@
           <!--1 oz Gold Maple Leaf Card-->
           <div class="col">
             <div class="card-group">
-              <div class="card bullion-card">
+              <div class="card bullion-card" data-metal="Gold">
                 <img src="..." class="card-img-top" alt="..." />
                 <div class="card-body">
                   <!--Product Name-->
@@ -1138,7 +1151,7 @@
           <!--1 oz Gold Eagle Card-->
           <div class="col">
             <div class="card-group">
-              <div class="card bullion-card">
+              <div class="card bullion-card" data-metal="Gold">
                 <img src="..." class="card-img-top" alt="..." />
                 <div class="card-body">
                   <!--Product Name-->
@@ -1200,7 +1213,7 @@
           <!--1 oz Gold Buffalo Card-->
           <div class="col">
             <div class="card-group">
-              <div class="card bullion-card">
+              <div class="card bullion-card" data-metal="Gold">
                 <img src="..." class="card-img-top" alt="..." />
                 <div class="card-body">
                   <!--Product Name-->
@@ -1262,7 +1275,7 @@
           <!--1 oz Silver Round | New, Various Mints -->
           <div class="col">
             <div class="card-group">
-              <div class="card bullion-card">
+              <div class="card bullion-card" data-metal="Silver">
                 <img src="..." class="card-img-top" alt="..." />
                 <div class="card-body">
                   <!--Product Name-->
@@ -1324,7 +1337,7 @@
           <!--Tube of Silver Rounds | New, Various Mints-->
           <div class="col">
             <div class="card-group">
-              <div class="card bullion-card">
+              <div class="card bullion-card" data-metal="Silver">
                 <img src="..." class="card-img-top" alt="..." />
                 <div class="card-body">
                   <!--Product Name-->
@@ -1386,7 +1399,7 @@
           <!--Monster Box of Silver Rounds | New, Various Mints-->
           <div class="col">
             <div class="card-group">
-              <div class="card bullion-card">
+              <div class="card bullion-card" data-metal="Silver">
                 <img src="..." class="card-img-top" alt="..." />
                 <div class="card-body">
                   <!--Product Name-->
@@ -1449,7 +1462,7 @@
           <!--1 oz Silver Bar | New, Various Mints-->
           <div class="col">
             <div class="card-group">
-              <div class="card bullion-card">
+              <div class="card bullion-card" data-metal="Silver">
                 <img src="..." class="card-img-top" alt="..." />
                 <div class="card-body">
                   <!--Product Name-->
@@ -1511,7 +1524,7 @@
           <!--5 oz Silver Bar | New, Various Mints-->
           <div class="col">
             <div class="card-group">
-              <div class="card bullion-card">
+              <div class="card bullion-card" data-metal="Silver">
                 <img src="..." class="card-img-top" alt="..." />
                 <div class="card-body">
                   <!--Product Name-->
@@ -1573,7 +1586,7 @@
           <!--10 oz Silver Bar | New, Various Mints-->
           <div class="col">
             <div class="card-group">
-              <div class="card bullion-card">
+              <div class="card bullion-card" data-metal="Silver">
                 <img src="..." class="card-img-top" alt="..." />
                 <div class="card-body">
                   <!--Product Name-->
@@ -1635,7 +1648,7 @@
           <!-- 10 oz Silver Bar | New, RCM-->
           <div class="col">
             <div class="card-group">
-              <div class="card bullion-card">
+              <div class="card bullion-card" data-metal="Silver">
                 <img src="..." class="card-img-top" alt="..." />
                 <div class="card-body">
                   <!--Product Name-->
@@ -1697,7 +1710,7 @@
           <!--1 Kilo Silver Bar | New, Various Mints-->
           <div class="col">
             <div class="card-group">
-              <div class="card bullion-card">
+              <div class="card bullion-card" data-metal="Silver">
                 <img src="..." class="card-img-top" alt="..." />
                 <div class="card-body">
                   <!--Product Name-->
@@ -1759,7 +1772,7 @@
           <!--1 Kilo Silver Bar | New, RCM-->
           <div class="col">
             <div class="card-group">
-              <div class="card bullion-card">
+              <div class="card bullion-card" data-metal="Silver">
                 <img src="..." class="card-img-top" alt="..." />
                 <div class="card-body">
                   <!--Product Name-->
@@ -1821,7 +1834,7 @@
           <!--100 oz Silver Bar | New, Various Mints-->
           <div class="col">
             <div class="card-group">
-              <div class="card bullion-card">
+              <div class="card bullion-card" data-metal="Silver">
                 <img src="..." class="card-img-top" alt="..." />
                 <div class="card-body">
                   <!--Product Name-->
@@ -1883,7 +1896,7 @@
           <!--100 oz Silver Bar | New, RCM-->
           <div class="col">
             <div class="card-group">
-              <div class="card bullion-card">
+              <div class="card bullion-card" data-metal="Silver">
                 <img src="..." class="card-img-top" alt="..." />
                 <div class="card-body">
                   <!--Product Name-->
@@ -1945,7 +1958,7 @@
           <!--1 oz Maple Leaf Silver Coin| New, RCM-->
           <div class="col">
             <div class="card-group">
-              <div class="card bullion-card">
+              <div class="card bullion-card" data-metal="Silver">
                 <img src="..." class="card-img-top" alt="..." />
                 <div class="card-body">
                   <!--Product Name-->
@@ -2007,7 +2020,7 @@
           <!--1 oz American Eagle Silver Coin | New, US Mint-->
           <div class="col">
             <div class="card-group">
-              <div class="card bullion-card">
+              <div class="card bullion-card" data-metal="Silver">
                 <img src="..." class="card-img-top" alt="..." />
                 <div class="card-body">
                   <!--Product Name-->
@@ -2069,7 +2082,7 @@
           <!--Tube of Maple Leaf Silver Coins | New, RCM-->
           <div class="col">
             <div class="card-group">
-              <div class="card bullion-card">
+              <div class="card bullion-card" data-metal="Silver">
                 <img src="..." class="card-img-top" alt="..." />
                 <div class="card-body">
                   <!--Product Name-->
@@ -2131,7 +2144,7 @@
           <!--Tube of American Eagle Silver Coins | New, US Mint-->
           <div class="col">
             <div class="card-group">
-              <div class="card bullion-card">
+              <div class="card bullion-card" data-metal="Silver">
                 <img src="..." class="card-img-top" alt="..." />
                 <div class="card-body">
                   <!--Product Name-->
@@ -2193,7 +2206,7 @@
           <!--Monster Box of Maple Leaf Silver Coins | New, RCM-->
           <div class="col">
             <div class="card-group">
-              <div class="card bullion-card">
+              <div class="card bullion-card" data-metal="Silver">
                 <img src="..." class="card-img-top" alt="..." />
                 <div class="card-body">
                   <!--Product Name-->
@@ -2256,7 +2269,7 @@
           <!--Monster Box of American Eagle Silver Coins | New, US Mint-->
           <div class="col">
             <div class="card-group">
-              <div class="card bullion-card">
+              <div class="card bullion-card" data-metal="Silver">
                 <img src="..." class="card-img-top" alt="..." />
                 <div class="card-body">
                   <!--Product Name-->
@@ -2456,5 +2469,7 @@
     <script type="module" src="/javascript/html/smallviewport.js"></script>
     <!-- This script adjusts the height of the cards as the viewport size changes-->
     <script type="module" src="/javascript/html/cardheight.js"></script>
+    <!-- This scripte allows for the filter and sort function-->
+    <script type="module" src="/javascript/html/bullionfiltersort.js"></script>
   </body>
 </html>

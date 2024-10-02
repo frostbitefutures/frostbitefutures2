@@ -280,6 +280,17 @@ hr {
 }
 .filter-sort-container .dropdown .btn {
   background-color: transparent;
+  border-color: #a861a4;
+}
+
+.clearFilter .btn {
+  background-color: transparent;
+  border-color: #058d8d;
+  color: white;
+}
+
+.clearFilter .btn:hover {
+  background-color: #07d1d1;
 }
 
 /* End Filter and Sort */

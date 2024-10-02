@@ -49,15 +49,10 @@ export function updateStorePricing() {
       // Function to iterate through the product array and find matches
       // ForEach method executes the provided function ONCE for each array element
       bullionProducts.forEach((product) => {
-        // Log each product it iterates through
-        console.log(`Product: ${product.name}`);
-
         // This finds the html element whose ID matches the ID  of the product currently being looped through the function.
         // Then stores the reference to the html element
         // productElement now holds the reference to the <h5> element with ID 1ozGB
         const productElement = document.getElementById(product.id);
-        // Log matches
-        console.log(productElement);
 
         // After it finds a match, it will store the needed properties of the array element into a variable
         if (productElement) {
@@ -65,8 +60,6 @@ export function updateStorePricing() {
           const metal = product.metal;
           const weight = product.weight;
           const premium = product.premium;
-
-          console.log(`${name} | ${metal} | ${weight} | ${premium}`);
 
           // Calculate the product price
           // Switch case to determine metal type and calculate price
@@ -88,9 +81,6 @@ export function updateStorePricing() {
               console.error("Invalid metal type");
               return;
           }
-
-          // Log product name and current price to console
-          console.log(`Name: ${name} costs $${price}`);
 
           // Update HTML elements using the new variables
           // Update Price
