@@ -1,5 +1,6 @@
 console.log("Bullion sort script has loaded successfully.");
 
+// function that targets all bullion-card elements and returns an array of visible cards
 function getVisibleCards() {
   // querySelectorAll returns a node list of all bullion card elements
   const allCards = document.querySelectorAll(".bullion-card");
@@ -10,6 +11,7 @@ function getVisibleCards() {
   );
 }
 
+// function that sorts products from highest --> lowest price
 function priceDesc() {
   // call the getVisibleCards function
   const visibleCards = getVisibleCards();
@@ -31,12 +33,17 @@ function priceDesc() {
   // If the result of b - a is 0, then a and b are equal, and should be treated as equal
   cardData.sort((a, b) => b.price - a.price);
 
-  // Get the parent container of the cards
-  const container = visibleCards[0].closest(".row");
+  // Get the parent row of the cards
+  // visibleCards[0] refers to the first element in the visibleCards array
+  // closest() is a dom method that traverses up the DOM tree from the element it is called on, and returns the closest match
+  const parentRow = visibleCards[0].closest(".row");
 
   // Rearrange the cards in the DOM
+  // We iterate through the sorted cardData array, and append each cards column element (col) to the parentRow container
   cardData.forEach((item) => {
-    container.appendChild(item.card.closest(".col"));
+    // For each item, the card property is accessed and the closest(col) method is called on this card element to find its closest ancestor element with the class col
+    // appendChild adds the specified element to the end of the list of children of the parentRow element
+    parentRow.appendChild(item.card.closest(".col"));
   });
 
   // Log the results
@@ -49,6 +56,7 @@ function priceDesc() {
   });
 }
 
+// function that sorts products from lowest --> highest price
 function priceAsc() {
   // call the getVisibleCards function to get all visible cards
   const visibleCards = getVisibleCards();
@@ -66,6 +74,76 @@ function priceAsc() {
 
   // sort the data
   cardData.sort((a, b) => a.price - b.price);
+
+  // get the parent row of the cards
+  const parentRow = visibleCards[0].closest(".row");
+
+  // Rearrange the cards in the DOM
+  cardData.forEach((item) => {
+    parentRow.appendChild(item.card.closest(".col"));
+  });
+}
+
+// function that sorts products from highest --> lowest weight
+function weightDesc() {
+  // call the getVisibleCards function
+  const visibleCards = getVisibleCards();
+  // make an array with the card and it's weight
+  const cardData = visibleCards.map((card) => {
+    // Target the span with the data-weight attribute
+    const weightElement = card.querySelector(
+      ".product-description-text[data-weight"
+    );
+    // Now we can target the data-weight attribute and set its value to the weight variable
+    const weight = weightElement.getAttribute("data-weight");
+    // Return an array with 2 properties; card and weight
+    return { card, weight };
+  });
+  console.log("Card Data:", cardData);
+
+  // sort by weight, highest --> lowest
+  cardData.sort((a, b) => b.weight - a.weight);
+
+  // get the parent row
+  const parentRow = visibleCards[0].closest(".row");
+
+  // append to the parent row and rearrange the dom
+  // Iterate through the array
+  cardData.forEach((item) => {
+    parentRow.appendChild(item.card.closest(".col"));
+  });
+}
+
+// function that sorts products from lowest --> highest weight
+function weightAsc() {
+  // call getVisible cards function
+  const visibleCards = getVisibleCards();
+
+  // make a new array with the properties { card, weight}
+  const cardData = visibleCards.map((card) => {
+    // Target the span element that contains the data-weight attribute
+    const weightElement = card.querySelector(
+      ".product-description-text[data-weight]"
+    );
+    // Target the data-weight attribute and store its value into the weight variable
+    const weight = weightElement.getAttribute("data-weight");
+
+    // return the array
+    return { card, weight };
+  });
+
+  // sort the array by weight, lowest --> highest
+  cardData.sort((a, b) => a.weight - b.weight);
+
+  // find the parent row
+  const parentRow = visibleCards[0].closest(".row");
+
+  // append and rearrange
+  // iterate through the sorted array
+  cardData.forEach((item) => {
+    // append to the parentRow
+    parentRow.appendChild(item.card.closest(".col"));
+  });
 }
 
 export function bullionSort(sort) {
