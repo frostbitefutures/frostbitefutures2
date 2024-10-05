@@ -1,4 +1,4 @@
-import { bullionProducts } from "../javascript/products.js";
+import { bullionProducts } from "../../javascript/preciousmetals/products.js";
 
 // Debouncing function to limit how often input handlers run
 export function debounce(func, wait) {

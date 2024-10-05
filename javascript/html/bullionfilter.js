@@ -2,8 +2,6 @@ console.log("Filter and sort script has loaded successfully.");
 
 // Function to filter bullion products based on user selection
 export function bullionFilter(filter) {
-  // TODO: Implement filter functionality
-
   // Put the filter to upper case to make the comparison case-insensitive
   const newFilter = filter.charAt(0).toUpperCase() + filter.slice(1);
   console.log(`Filtered products: ${newFilter}`);
